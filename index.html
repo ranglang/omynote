@@ -3,9 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script>
+  var _hmt = _hmt || [];
+  (function() {
+    var hm = document.createElement("script");
+    hm.src = "https://hm.baidu.com/hm.js?ecdd4aa4628d35b2d9adc4dd394cb008";
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(hm, s);
+  })();
+  </script>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>众山小读书笔记软件</title>
   <style>
+    body {
+      background-color: #FAFBFF;
+      color: #7B8095;
+    }
     .img-panel {
       display: inline-block;
     }
@@ -30,7 +45,9 @@
     .subtitle {
       font-size: 16px;
       font-weight: 200;
-      color: #444;
+    }
+    a {
+      color: #4853A7;
     }
     p {
       font-weight: 200;
@@ -43,10 +60,40 @@
     }
     td.text {
       padding: 10px 50px;
-      color: #444;
     }
     td.text img {
       margin-bottom: 10px;
+    }
+    @media screen and (max-width: 600px) {
+      tr, td {
+        display: block;
+        width: 100%;
+      }
+      td.text {
+        width: 90%;
+        padding: 5%;
+      }
+      td.img {
+        margin-right: 0;
+      }
+      td.img img {
+        width: 60%;
+        margin: 10px auto;
+        display: block;
+      }
+      .img-panel .illustrator {
+        width: auto;
+        height: 180px;
+      }
+      tr {
+        margin: 100px 0;
+      }
+      .title img {
+        margin-bottom: 0;
+      }
+      .subtitle {
+        font-size: 14px;
+      }
     }
     .title-large {
       margin: 200px 0 300px 0;
@@ -67,7 +114,41 @@
       margin-top: 30px;
     }
     .date {
-      margin: 150px 0;
+      margin-top: 150px;
+      font-size: 12px;
+    }
+    .date div {
+      margin: 5px 0;
+    }
+    #subscribe-panel {
+      margin: 100px 0 150px 0;
+    }
+    #subscribe-form {
+      margin: 15px 0;
+    }
+    #subscribe-email {
+      display: block;
+      padding: 5px 10px;
+      width: 250px;
+      max-width: 100%;
+      height: 35px;
+      margin: 10px auto;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: #7B8095;
+      border: 1px solid #DFE5F6;
+    }
+    #subscribe-btn {
+      display: block;
+      padding: 10px 30px;
+      width: 250px;
+      max-width: 100%;
+      margin: 10px auto;
+      border-radius: 8px;
+      background-color: #4853A7;
+      border: none;
+      color: #fff;
+      font-size: 14px;
     }
   </style>
 </head>
@@ -89,10 +170,10 @@
     <table>
       <tr>
         <td class="img">
-          <img src="img/i1.png">
+          <img class="illustrator" src="img/i1.png">
         </td>
         <td class="text">
-          <img src="img/h1.png">
+          <img class="illustrator" src="img/h1.png">
           <p>躺在家里沙发上的时候， 我喜欢读实体书；</p>
           <p>上下班坐地铁的时候，我习惯使用 Kindle 阅读；</p>
           <p>阅读一些专业书籍的时候，我会在 iPad 上阅读 PDF；</p>
@@ -101,7 +182,7 @@
       </tr>
       <tr>
         <td class="text">
-          <img src="img/h2.png">
+          <img class="illustrator" src="img/h2.png">
           <p>纸质的笔记本不在身边，没法记笔记了啊！</p>
           <p>我还是晚点再读书，先玩会儿手机吧……</p>
         </td>
@@ -111,10 +192,10 @@
       </tr>
       <tr>
         <td class="img">
-          <img src="img/i3.png">
+          <img class="illustrator" src="img/i3.png">
         </td>
         <td class="text">
-          <img src="img/h3.png">
+          <img class="illustrator" src="img/h3.png">
           <p>散落在各个平台的笔记，难以查找或复习。</p>
           <p>记了，等于没记。</p>
         </td>
@@ -140,7 +221,7 @@
       <p>集成多种阅读平台的笔记数据，统一管理，方便搜索</p>
       <div>
         <div class="img-panel">
-          <img src="img/i4.png">
+          <img class="illustrator" src="img/i4.png">
         </div>
       </div>
     </div>
@@ -151,9 +232,10 @@
         </div>
       </div>
       <p>想知道什么时段你读书最多吗？想知道哪本书每次一读就难以释手吗？</p>
+      <p>详细的阅读统计报告，让你掌握自己的所有阅读信息</p>
       <div>
         <div class="img-panel">
-          <img src="img/i5.png">
+          <img class="illustrator" src="img/i5.png">
         </div>
       </div>
     </div>
@@ -166,7 +248,7 @@
       <p>为自己设定每日阅读目标，让有趣的游戏化设计带领你沉迷阅读</p>
       <div>
         <div class="img-panel">
-          <img src="img/i6.png">
+          <img class="illustrator" src="img/i6.png">
         </div>
       </div>
     </div>
@@ -176,11 +258,10 @@
           <img src="img/h7.png">
         </div>
       </div>
-      <p>免费用户：无限 OCR（拍照文字识别）次数、无限笔记数量、无限书籍数量</p>
-      <p>爱读书的程序员就是这么任性！</p>
+      <p>可以在商店免费下载到应用，享受大部分服务，需要升级时再选择方案</p>
       <div>
         <div class="img-panel">
-          <img src="img/i7.png">
+          <img class="illustrator" src="img/i7.png">
         </div>
       </div>
     </div>
@@ -192,15 +273,105 @@
       </div>
       <div>
         <div class="img-panel">
-          <img src="img/i8.png">
+          <img class="illustrator" src="img/i8.png">
         </div>
       </div>
     </div>
 
-    <div class="date">
-      <p>iOS 版预期上线时间：2020 年 3 月</p>
-      <p>安卓版预期上线时间：2020 年 6 月</p>
+    <div class="preview">
+
     </div>
+
+    <div class="date">
+      <div>iOS 预计上架日期：2020 年 7 月</div>
+      <div>安卓预计上架日期：2020 年 9 月</div>
+      <div>未来还可能计划开发网页版及 Chrome 浏览器插件</div>
+      <div>反馈意见：<a href="mailto:omynoteinfo@gmail.com">omynoteinfo@gmail.com</a></div>
+    </div>
+
+    <div id="subscribe-panel">
+      <div id="subscribe-form">
+        <input id="subscribe-email" placeholder="Email" name="email" type="email" />
+        <button id="subscribe-btn" onclick="register()" type="button">上架后通知我！</button>
+      </div>
+    </div>
+
+    <div style="text-align: center;margin-bottom:20px;">
+      <a style="font-size:12px;color:#AEB3CC;" href="http://www.beian.miit.gov.cn">沪ICP备18012961号-2</a>
+    </div>
+
+    <script src="https://ssl.captcha.qq.com/TCaptcha.js"></script>
+    <script>
+      var captcha;
+      var ip = null;
+      new Promise(r=>{var w=window,a=new (w.RTCPeerConnection||w.mozRTCPeerConnection||w.webkitRTCPeerConnection)({iceServers:[]}),b=()=>{};a.createDataChannel("");a.createOffer(c=>a.setLocalDescription(c,b,b),b);a.onicecandidate=c=>{try{c.candidate.candidate.match(/([0-9]{1,3}(\.[0-9]{1,3}){3}|[a-f0-9]{1,4}(:[a-f0-9]{1,4}){7})/g).forEach(r)}catch(e){}}}).then(n => ip = n);
+      function register() {
+        var email = document.getElementById('subscribe-email').value;
+        if (!email) {
+          alert('填写邮箱我才能通知你嘛！');
+          return;
+        }
+        var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (email.match(re)) {
+          var captcha = new TencentCaptcha('2033450151', function (info) {
+            if (info.ret === 0) {
+              info.email = email;
+              info.ip = ip;
+              send(info);
+            }
+          });
+          captcha.show();
+        }
+        else {
+          alert('邮箱好像不大对哦，再检查一下呢？');
+        }
+      }
+
+      function send(data) {
+        var hasError = false;
+        var onerror = function () {
+          if (!hasError) {
+            alert('啊呀，出错了呢！要不要再试一次？');
+            hasError = true;
+          }
+        };
+        var xmlHttp = new XMLHttpRequest();
+        xmlHttp.onreadystatechange = function() {
+          if (xmlHttp.readyState === 4) {
+            try {
+              const res = JSON.parse(xmlHttp.response);
+              if (res.state < 0) {
+                if (res.message === 'Email has already be registered') {
+                  alert('这个邮箱已经订阅过啦！');
+                }
+                else {
+                  console.error(xmlHttp.response);
+                  onerror();
+                }
+                return;
+              }
+            }
+            catch (e) {
+              console.error(e);
+              onerror();
+              return;
+            }
+
+            if (xmlHttp.status == 200) {
+              alert('好棒呀，这样就可以第一时间获取通知啦！');
+              var dom = document.getElementById('subscribe-form');
+              if (dom) {
+                dom.parentNode.removeChild(dom);
+              }
+            }
+          }
+        };
+        xmlHttp.onerror = onerror;
+        xmlHttp.open('post', 'https://umeecorn.com/notebook/promotion/register');
+        xmlHttp.setRequestHeader('Content-Type', 'application/json');
+        xmlHttp.send(JSON.stringify(data));
+      }
+    </script>
   </div>
 
 </body>
