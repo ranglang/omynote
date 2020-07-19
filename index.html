@@ -150,6 +150,18 @@
       color: #fff;
       font-size: 14px;
     }
+    #media {
+      margin: 20px 0;
+    }
+    .download-title {
+      margin-top: 20px;
+      font-size: 16px;
+      display: none;
+    }
+    .download-detail {
+      margin: 5px 0;
+      font-size: 14px;
+    }
   </style>
 </head>
 <body>
@@ -283,16 +295,24 @@
     </div>
 
     <div class="date">
-      <div>iOS 预计上架日期：2020 年 7 月</div>
+      <div>iOS 预计上架日期：2020 年 8 月</div>
       <div>安卓预计上架日期：2020 年 9 月</div>
       <div>未来还可能计划开发网页版及 Chrome 浏览器插件</div>
-      <div>反馈意见：<a href="mailto:omynoteinfo@gmail.com">omynoteinfo@gmail.com</a></div>
+      <div>反馈意见：<a href="mailto:admin@omynote.com">admin@omynote.com</a></div>
+      <div id="media">
+        微博：<a href="https://weibo.com/u/6512831598" target="_blank">众山小读书笔记</a>，公众号：众山小读书笔记
+      </div>
     </div>
 
     <div id="subscribe-panel">
       <div id="subscribe-form">
         <input id="subscribe-email" placeholder="Email" name="email" type="email" />
-        <button id="subscribe-btn" onclick="register()" type="button">上架后通知我！</button>
+        <button id="subscribe-btn" onclick="register()" type="button">获取内测链接</button>
+      </div>
+      <div id="download-ios" class="download-title">iOS 内测链接（数量有限，先到先得）：
+        <div class="download-detail">
+          请用 iOS 设备打开 <a href="https://testflight.apple.com/join/yXUVcHPP" target="_blank">https://testflight.apple.com/join/yXUVcHPP</a>
+        </div>
       </div>
     </div>
 
@@ -358,11 +378,13 @@
             }
 
             if (xmlHttp.status == 200) {
-              alert('好棒呀，这样就可以第一时间获取通知啦！');
+              alert('iOS 内测链接已发布，其他平台敬请期待！');
               var dom = document.getElementById('subscribe-form');
               if (dom) {
                 dom.parentNode.removeChild(dom);
               }
+              var dowload = document.getElementById('download-ios');
+              dowload.setAttribute('style', 'display: block');
             }
           }
         };
