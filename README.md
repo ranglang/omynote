@@ -26,7 +26,9 @@
 
 ## 社区与反馈
 
-- [QQ 群](https://qm.qq.com/cgi-bin/qm/qr?k=bBPnk8kG0_vdqwjv2jKnGCx4lYcZDcnR&jump_from=webapi)
 - [微博](https://weibo.com/u/6512831598)
 - [豆瓣小组](https://www.douban.com/group/708424/)
 - 邮件：admin at omynote.com
+- QQ 群：使用手机 QQ 扫描以下二维码
+
+![](./img/qq.png)
