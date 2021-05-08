@@ -26,6 +26,7 @@
 
 ## 社区与反馈
 
+- [官网](https://omynote.com)
 - [微博](https://weibo.com/u/6512831598)
 - [豆瓣小组](https://www.douban.com/group/708424/)
 - 邮件：admin at omynote.com
